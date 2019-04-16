@@ -1,0 +1,19 @@
+<div class="progress-container progress-container--{{ lxProgress.lxType }} progress-container--{{ lxProgress.lxColor }} {{ lxProgress.lxClass }}">
+    <div class="progress-circular"
+         ng-if="lxProgress.lxType === 'circular'"
+         ng-style="lxProgress.getProgressDiameter()">
+        <svg class="progress-circular__svg">
+            <g transform="translate(50 50)">
+                <g class="progress-circular__g">
+                    <circle class="progress-circular__path" cx="0" cy="0" r="20" fill="none" stroke-width="4" stroke-miterlimit="10" ng-style="lxProgress.getCircularProgressValue()"></circle>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <div class="progress-linear" ng-if="lxProgress.lxType === 'linear'">
+        <div class="progress-linear__background"></div>
+        <div class="progress-linear__bar progress-linear__bar--first" ng-style="lxProgress.getLinearProgressValue()"></div>
+        <div class="progress-linear__bar progress-linear__bar--second"></div>
+    </div>
+</div>

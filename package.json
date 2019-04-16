@@ -6,8 +6,12 @@
   "keywords": [],
   "dependencies": {
     "sails": "^1.1.0",
-    "grunt": "1.0.1",
-    "sails-hook-grunt": "^3.1.0",
+    "bcrypt": "^3.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
+    "moment-duration-format": "^2.2.2",
+    "moment-range": "^3.1.1",
+    "ms": "^2.1.1",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^1.5.5",
     "@sailshq/connect-redis": "^3.2.1",
@@ -15,7 +19,12 @@
     "@sailshq/lodash": "^3.10.3"
   },
   "devDependencies": {
-    "@sailshq/eslint": "^4.19.3"
+    "@sailshq/eslint": "^4.19.3",
+    "gulp": "^3.9.1",
+    "gulp-filter": "^5.0.1",
+    "gulp-flatten": "^0.3.1",
+    "gulp-inject": "^4.3.0",
+    "main-bower-files": "^2.13.1"
   },
   "scripts": {
     "start": "NODE_ENV=production node app.js",
