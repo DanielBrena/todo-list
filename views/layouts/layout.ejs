@@ -17,6 +17,7 @@
 
 
   <!--inject:css-->
+  <link rel="stylesheet" href="/css/helper.css">
   <!--endinject-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFkYAl8dcXJusrMQlgpVYrHHuo9UzFlAw"
     async defer></script>
@@ -129,9 +130,24 @@
   <script src="/js/app/core/core.module.js"></script>
 
 
+  <script src="/js/app/private/private.module.js"></script>
+
+
+  <script src="/js/app/private/private.routes.module.js"></script>
+
+
+  <script src="/js/app/public/public.module.js"></script>
+
+
+  <script src="/js/app/public/public.routes.module.js"></script>
+
+
   <!--endinject-->
 
   <!--providerInject:js-->
+
+
+  <script src="/js/app/blocks/routerHelperProvider.provider.js"></script>
 
 
   <!--endinject-->
@@ -139,14 +155,45 @@
   <!--controllerInject:js-->
 
 
+  <script src="/js/app/private/private.controller.js"></script>
+
+
+  <script src="/js/app/private/tasks/tasks.controller.js"></script>
+
+
+  <script src="/js/app/public/login/login.controller.js"></script>
+
+
+  <script src="/js/app/private/users/users.controller.js"></script>
+
+
+  <script src="/js/app/public/register/register.controller.js"></script>
+
+
   <!--endinject-->
 
   <!--factoryInject:js-->
 
 
+  <script src="/js/app/blocks/broadcast.factory.js"></script>
+
+
+  <script src="/js/app/blocks/cookiesStorage.factory.js"></script>
+
+
+  <script src="/js/app/private/tasks/tasks.factory.js"></script>
+
+
+  <script src="/js/app/private/users/users.factory.js"></script>
+
+
   <!--endinject-->
 
   <!--directiveInject:js-->
+  
+
+  
+  <script src="/js/app/private/tasks/tasks.directive.js"></script>
   
 
   

@@ -21,6 +21,32 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  'get /tasks/user':{
+    controller:'TasksController',
+    action:'findByUser',
+  },
+  'delete /tasks/:id':{
+    controller:'TasksController',
+    action:'destroy'
+  },
+  'get /tasks/search':{
+    controller:'TasksController',
+    action:'search'
+  },
+  'get /task/:id':{
+    controller:'TasksController',
+    action:'findOne'
+  },
+  'get /users/:id':{
+    controller:'UsersController',
+    action:'findOne'
+  },
+  'post /users/auth':{
+    controller:'UsersController',
+    action:'auth'
+  }
+
+
 
   /***************************************************************************
   *                                                                          *

@@ -1,0 +1,43 @@
+<lx-dialog lx-size="m" lx-auto-close="false" id="{{ vm.dialogId }}" ng-form="formTasks">
+    <lx-dialog-header>
+        <div class="toolbar bgc-deep-purple-900 pl++">
+            <span class="toolbar__label tc-white fs-title">
+                {{vm.id? 'Actualizar Tarea':'Crear Tarea'}}
+            </span>
+        </div>
+    </lx-dialog-header>
+    <lx-dialog-content>
+        <div flex-container="row" flex-column="12" class="bgc-white  permiso-contenedor">
+            <div flex-item="12">
+                <div flex-container="row" class="p bgc-white bb" flex-column="12">
+                    <div flex-item="12 " class="left">
+                        <p class="mt mb fs-body-1">Última actualización:<span
+                                class="fs-body-2 tc-deep-purple-900 pointer">
+                                {{vm.dataAux.task.updatedAt |  date:'EEE dd, MMMM yyyy HH:mm' }}</span></p>
+
+                    </div>
+                </div>
+                <div flex-container="row" flex-gutter="24" class="pl+ pr+ pb+">
+                    <div flex-item="12">
+
+
+                        <lx-text-field class="fs-subheading-2" lx-label="Titulo" lx-allow-clear="true">
+                            <input class="fs-subheading-2" id="task-title" type="text" required ng-model="vm.dataAux.task.title">
+                        </lx-text-field>
+
+                        <lx-text-field class="fs-subheading-2" lx-label="Descripción" lx-allow-clear="true">
+                            <textarea class="fs-subheading-2" rows="1"
+                                ng-model="vm.dataAux.task.description"></textarea>
+                        </lx-text-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lx-dialog-content>
+    <lx-dialog-footer>
+        <lx-button lx-color="black" lx-type="flat" lx-dialog-close>Cancelar</lx-button>
+        <lx-button ng-if="vm.id" lx-type="flat" ng-disabled="formTasks.$invalid"
+            ng-click="vm.events.update(vm.dataAux)">Actualizar</lx-button>
+
+    </lx-dialog-footer>
+</lx-dialog>

@@ -1,0 +1,39 @@
+<div flex-container="row" flex-column="12" class="bgc-white" style="min-height: 100vh;"> 
+    <div flex-item="12" class="pt+++  p+">
+      <div flex-container="row" flex-column="12" >
+        <div flex-item="4">
+  
+        </div>
+        <div flex-item="4">
+          <div class="card bgc-white mt++" ng-form="formRegister">
+            
+            <div class="p++">
+                <span class=" mt tc-deep-purple-900 display-block text-center fs-headline">Registro de Usuario</span>
+  
+                <lx-text-field class="fs-subheading-2" lx-label="Nombre" lx-allow-clear="true">
+                    <input class="fs-subheading-2"   autocomplete="false"  tabindex="1" type="text" required ng-model="vm.dataAux.user.name">
+                  </lx-text-field>
+
+                  <lx-text-field class="fs-subheading-2" lx-label="Apellidos" lx-allow-clear="true">
+                    <input class="fs-subheading-2"   autocomplete="false"  tabindex="2" type="text" required ng-model="vm.dataAux.user.lastname">
+                  </lx-text-field>
+
+                  <lx-text-field class="fs-subheading-2" lx-label="Correo" lx-allow-clear="true">
+                    <input class="fs-subheading-2"   autocomplete="false"  tabindex="3" type="email" required ng-model="vm.dataAux.user.email">
+                  </lx-text-field>
+
+  
+                  <lx-text-field class="fs-subheading-2" lx-label="Contraseña" lx-allow-clear="true">
+                      <input class="fs-subheading-2" autocomplete="false"  tabindex="5" type="password"  required ng-model="vm.dataAux.user.password">
+                    </lx-text-field>
+  
+                    <p class="mt mb fs-body-1">¿Ya cuentas con usuario? Accede <span ui-sref="login" class="fs-body-2 tc-deep-purple-900 pointer">aquí</span></p>
+
+                    <lx-button lx-type="raised" ng-disabled="formRegister.$invalid"  ng-click="vm.events.register(vm.dataAux)">Registrarse</lx-button>
+  
+            </div>
+          </div>
+          </div>
+    </div>
+    </div>
+  </div>

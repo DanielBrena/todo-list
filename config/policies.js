@@ -18,5 +18,14 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  TasksController:{
+    'create':['validUser'],
+    'findByUser':['validUser'],
+    'search':['validUser'],
+    'findOne':['validUser']
+  },
+  UsersController:{
+    'findOne':['validUser']
+  }
 
 };

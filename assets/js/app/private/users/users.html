@@ -1,0 +1,46 @@
+<div class=" p+" flex-container="row" flex-column="12">
+    <div flex-item="2">
+
+
+    </div>
+    <div flex-item="8">
+        <div class="card p++">
+            <div class=" bgc-white " flex-container="row" flex-column="12" ng-form="formUsers">
+                <div flex-item="12">
+                    <lx-text-field class="fs-subheading-2" lx-label="Nombre" lx-allow-clear="true">
+                        <input class="fs-subheading-2" autocomplete="false" tabindex="1" type="text" required
+                            ng-model="vm.dataAux.user.name">
+                    </lx-text-field>
+
+                    <lx-text-field class="fs-subheading-2" lx-label="Apellidos" lx-allow-clear="true">
+                        <input class="fs-subheading-2" autocomplete="false" tabindex="2" type="text" required
+                            ng-model="vm.dataAux.user.lastname">
+                    </lx-text-field>
+
+                    <lx-text-field class="fs-subheading-2" lx-label="Correo" lx-allow-clear="true">
+                        <input class="fs-subheading-2" autocomplete="false" tabindex="3" type="email" required
+                            ng-model="vm.dataAux.user.email">
+                    </lx-text-field>
+
+
+                    <lx-text-field class="fs-subheading-2" lx-label="Nueva Contraseña" lx-allow-clear="true">
+                        <input class="fs-subheading-2" autocomplete="false" tabindex="5" type="password" 
+                            ng-model="vm.dataAux.user.new_password">
+                    </lx-text-field>
+
+
+                    <lx-button lx-type="raised" ng-disabled="formUsers.$invalid"
+                        ng-click="vm.events.update(vm.dataAux)">Guardar cambios</lx-button>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>

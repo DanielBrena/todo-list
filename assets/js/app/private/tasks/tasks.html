@@ -1,0 +1,78 @@
+<div class=" p+" flex-container="row" flex-column="12">
+    <div flex-item="2">
+
+
+    </div>
+    <div flex-item="8">
+        <div class="card">
+            <div class="toolbar bgc-grey-100 " flex-container="row" flex-column="12">
+
+                <div flex-item="12">
+                    <lx-search-filter class="bgc-white-1">
+                        <input type="text" placeholder="Buscar Tarea"
+                            ng-keyup="vm.events.search(query)" ng-model="query">
+                    </lx-search-filter>
+                </div>
+
+            </div>
+
+            <div flex-container="row" flex-column="12" ng-form="formNewTask">
+                <div flex-item="10">
+                        <div flex-container="row" flex-column="12" >
+                                <input type="text" class="add-task fs-title" required ng-model="vm.dataAux.task.title" placeholder="Título de tarea">            
+
+                            </div>
+                            <div flex-container="row" flex-column="12" >
+                                    <input type="text" class="add-task fs-body-1"  ng-model="vm.dataAux.task.description" placeholder="Descripción de tarea">            
+
+                                </div>
+                      </div>
+                <div flex-item="2" class="text-right">
+                        <lx-button lx-type="raised" ng-disabled="formNewTask.$invalid" class="btn-add-task" ng-click="vm.events.create(vm.dataAux)">Crear </lx-button>
+                </div>
+            </div>
+
+            <div flex-container="row" flex-column="12">
+                <div flex-item="12">
+                        <ul class="list mt++">
+                                <li class="list-row list-row--has-separator" ng-dblclick="" ng-click="vm.idTask= task.id" dialog-id="{{vm.dialogIdTask}}"
+                                event-tasks="open"  ng-class="{'bgc-grey-100':task.removing}" ng-repeat="task in vm.tasks track by $index" ng-mouseover="delete = true" ng-mouseleave="delete = false" ng-init="delete=false">
+                                    <div class="list-row__primary">
+                                            <lx-checkbox ng-model="vm.tasks[$index].is_check" ng-change="vm.events.check(vm.tasks[$index])"></lx-checkbox>
+
+                                    </div>
+                     
+                                    <div class="list-row__content">
+                                            <span class="display-block">{{task.title}}</span>
+                                            <span class="display-block fs-caption tc-black-2">Última actualización: {{task.updatedAt | date:'EEE dd, MMMM yyyy HH:mm'}}</span>
+                                            <span class="display-block fs-body-1 tc-black-2">{{task.description}}</span>                                    </div>
+                     
+                                    <div class="list-row__secondary">
+                                        <lx-icon ng-if="delete" ng-click="vm.events.destroy(task)" class="pointer" lx-id="{{task.removing?'delete-empty':'delete'}}" lx-size="xs" lx-color="grey" lx-type="flat"></lx-icon>
+                                    </div>
+                                </li>
+                </div>
+            </div>
+            <div ng-if="vm.tasks.length > 0 && vm.pagination" class="toolbar  " flex-container="row" flex-column="12">
+                    <div flex-item="12" class="text-right">
+                      <div>
+                        <lx-button class="tc-blue-500 bgc-white" ng-click="vm.events.find(vm.config.page-1,vm.config.limit)" lx-size="s" lx-type="icon"
+                          ng-disabled="vm.config.page == 1 ">
+                          <i class="mdi mdi-arrow-left-drop-circle-outline"></i>
+                        </lx-button>
+                        <lx-button lx-size="s" class="tc-blue-500" lx-type="flat">{{vm.config.page}}/{{vm.pagination.paginate}}</lx-button>
+                        <lx-button class="tc-blue-500 bgc-white" ng-disabled="vm.config.page == vm.pagination.paginate" lx-size="s" lx-type="icon"
+                          ng-click="vm.events.find(vm.config.page+1,vm.config.limit)">
+                          <i class="mdi mdi-arrow-right-drop-circle-outline"></i>
+                        </lx-button>
+                      </div>
+                    </div>
+                  </div>
+
+
+        </div>
+    </div>
+</div>
+
+<tasks id="{{vm.idTask}}" dialog-id="{{vm.dialogIdTask}}">
+    </tasks>
