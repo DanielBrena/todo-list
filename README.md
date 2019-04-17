@@ -2,25 +2,37 @@
 
 a [Sails v1](https://sailsjs.com) application
 
+### Requisitos
+- NodeJS
+- SailsJS (Opcional)
+- Navegador Web Google Chrome (Recomendable)
 
-### Links
-
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
-
-
-### Version info
-
-This app was originally generated on Tue Apr 16 2019 11:05:13 GMT-0500 (Central Daylight Time) using Sails v1.1.0.
-
-<!-- Internally, Sails used [`sails-generate@1.16.0`](https://github.com/balderdashy/sails-generate/tree/v1.16.0/lib/core-generators/new). -->
+### Instalación
 
 
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+Clonar repositorio
+```
+git clone https://github.com/DanielBrena/todo-list.git
+```
+
+Instalar paquetes
+```
+cd todo-list
+npm install
+```
+
+Iniciar servidor, en caso de tener instalado SailsJS
+```
+sails lift
+```
+o sólo tener instalado NodeJS
+```
+node app.js
+```
+
+
+En el promt seleccionar la opción 1
+
+Ir al navegador en el siguiente enlace [http://localhost:1337](http://localhost:1337)
 
